@@ -11,7 +11,7 @@ export default {
     },
     data() {
         return {
-
+            aa: "4545"
         };
     },
     computed: {

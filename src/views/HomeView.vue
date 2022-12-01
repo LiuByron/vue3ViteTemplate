@@ -8,7 +8,7 @@ import User from '@/api/user';
 export default {
   data() {
     return {
-      username: "1",
+      username: '',
       password: ''
     };
   },
