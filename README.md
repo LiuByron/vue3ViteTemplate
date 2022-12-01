@@ -8,4 +8,4 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 ## 配置参考链接
 
-- [configuration](https://mp.weixin.qq.com/s/7d-sgTqrhj_HxqNWfxspQQ)
+- [Vite3 + Vue3 工程户配置](https://mp.weixin.qq.com/s/7d-sgTqrhj_HxqNWfxspQQ)
