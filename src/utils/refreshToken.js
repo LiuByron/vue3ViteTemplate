@@ -1,5 +1,5 @@
 // 存储由于 token 过期导致 失败的请求
-const expiredRequestArr = [];
+let expiredRequestArr = [];
 
 /**
 * 存储当前因为 token 失效导致发送失败的请求
