@@ -3,22 +3,68 @@ import { resolve } from 'path';
 import vue from '@vitejs/plugin-vue';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
-import { TDesignResolver } from 'unplugin-vue-components/resolvers'
+import { TDesignResolver, ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './',
   plugins: [
     vue(),
     AutoImport({
-      resolver: [TDesignResolver({
-        library: 'vue-next'
-      })]
+      // 需要去解析的文件
+      include: [
+        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+        /\.vue$/,
+        /\.vue\?vue/, // .vue
+        /\.md$/ // .md
+      ],
+      // imports 指定自动引入的包位置（名）
+      imports: ['vue', 'pinia', 'vue-router'],// 生成相应的自动导入json文件。
+      eslintrc: {
+        // 启用
+        enabled: true,
+        // 生成自动导入json文件位置
+        filepath: './.eslintrc-auto-import.json',
+        // 全局属性值
+        globalsPropValue: true
+      },
+      resolvers: [
+        TDesignResolver({
+          library: 'vue-next'
+        }),
+        ElementPlusResolver()
+      ]
     }),
     Components({
-      resolvers: [TDesignResolver({
-        library: 'vue-next'
-      })]
+      // imports 指定组件所在目录，默认为 src/components
+      dirs: ['src/components/', 'src/view/'],
+      // 需要去解析的文件
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      resolvers: [
+        TDesignResolver({ library: 'vue-next' }),
+        ElementPlusResolver({
+          sideEffect: true
+        }),
+        IconsResolver({
+          prefix: "icon",
+          customCollections: ["user", "home"]
+        })
+      ]
+    }),
+    Icons({
+      compiler: 'vue3',
+      customCollections: {
+        user: FileSystemIconLoader("src/assets/svg/user", svg =>
+          svg.replace(/^<svg /, '<svg fill="currentColor"')
+        ),
+        home: FileSystemIconLoader("src/assets/svg/home", svg => 
+          svg.replace(/^<svg /, '<svg fill="currentColor"')
+        )
+      },
+      autoInstall: true
     })
   ],
   resolve: {

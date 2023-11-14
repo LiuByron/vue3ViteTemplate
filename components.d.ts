@@ -7,7 +7,22 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    ElIcon: typeof import('element-plus/es')['ElIcon']
+    ElLink: typeof import('element-plus/es')['ElLink']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    IconElEdit: typeof import('~icons/el/edit')['default']
+    IconHomeAvatar: typeof import('~icons/home/avatar')['default']
+    IconHomeAvg: typeof import('~icons/home/avg')['default']
+    IconHomeIc_project: typeof import('~icons/home/ic_project')['default']
+    IconHomeKitchen: typeof import('~icons/home/kitchen')['default']
+    IconHomeTest: typeof import('~icons/home/test')['default']
+    IconIcBaseline5g: typeof import('~icons/ic/baseline5g')['default']
+    IconUiwAlipay: typeof import('~icons/uiw/alipay')['default']
+    IconUserAiJianguan: typeof import('~icons/user/ai-jianguan')['default']
+    IconUserAiJianGuan: typeof import('~icons/user/ai-jian-guan')['default']
+    IconUserAIjianguan: typeof import('~icons/user/a-ijianguan')['default']
+    IconUserPhone: typeof import('~icons/user/phone')['default']
+    IconUserTest: typeof import('~icons/user/test')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
