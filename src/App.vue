@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HelloWorld from "./components/HelloWorld.vue";
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
@@ -14,11 +14,8 @@ import HelloWorld from "./components/HelloWorld.vue";
   <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .logo {
-  position: absolute;
-  top: 0;
-  left: 0;
   padding: 1.5em;
   height: 6em;
   transition: filter 300ms;
