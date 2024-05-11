@@ -11,7 +11,10 @@
     "eslint": "eslint src/ --fix",
     "prettier": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
     "lint:style": "stylelint \"./**/*.{css,less,vue,html}\" --fix",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged",
+    "commitlint": "commitlint --config .commitlint.config.cjs -e -V"
   },
   "config": {
     "commitizen": {
@@ -22,11 +25,15 @@
     "vue": "^3.4.21"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "@eslint/js": "^9.2.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "eslint": "^9.2.0",
     "eslint-plugin-vue": "^9.26.0",
     "globals": "^15.2.0",
+    "husky": "8.0.3",
+    "lint-staged": "^15.2.2",
     "postcss": "^8.4.38",
     "postcss-html": "^1.7.0",
     "postcss-less": "^6.0.0",
