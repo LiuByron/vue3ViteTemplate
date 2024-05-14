@@ -6,6 +6,16 @@ const routes = [
     name: 'home',
     component: () => import(/* webpackChunkName: "about" */ '../views/HomeView/index.vue')
   },
+  {
+    path: '/crawler',
+    name: 'crawler',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Crawler/index.vue')
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: () => import(/* webpackChunkName: "about" */ '../views/About/index.vue')
+  },
 ]
 
 const router = createRouter({
