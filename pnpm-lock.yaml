@@ -46,6 +46,9 @@ devDependencies:
   vite:
     specifier: ^5.2.0
     version: 5.2.11(sass@1.76.0)
+  vite-plugin-env-parse:
+    specifier: ^1.0.13
+    version: 1.0.13(vite@5.2.11)
 
 packages:
 
@@ -1307,6 +1310,14 @@ packages:
       escalade: 3.1.2
       picocolors: 1.0.1
     dev: false
+
+  /vite-plugin-env-parse@1.0.13(vite@5.2.11):
+    resolution: {integrity: sha512-H7sjrZIPLUVak9ziNw2sPaguJPD7BsihyeqXvtg3ih0hUmv4EBO/CwjvVMT7sXW/GuaL25BnmRSangHnzL+CWw==}
+    peerDependencies:
+      vite: '*'
+    dependencies:
+      vite: 5.2.11(sass@1.76.0)
+    dev: true
 
   /vite@5.2.11(sass@1.76.0):
     resolution: {integrity: sha512-HndV31LWW05i1BLPMUCE1B9E9GFbOu1MbenhS58FuK6owSO5qHm7GiCotrNY1YE5rMeQSFBGmT5ZaLEjFizgiQ==}
