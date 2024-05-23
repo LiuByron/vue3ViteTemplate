@@ -30,6 +30,7 @@
     "@ant-design/icons-vue": "^7.0.1",
     "ant-design-vue": "4.x",
     "path": "^0.12.7",
+    "radash": "^12.1.0",
     "vue": "^3.4.21"
   },
   "devDependencies": {
