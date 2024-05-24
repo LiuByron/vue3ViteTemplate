@@ -21,14 +21,5 @@ export default defineConfig({
     alias: {
       '@': '/src'
     }
-  },
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://kyfw.12306.cn',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
-      },
-    },
   }
 })

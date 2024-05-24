@@ -7,15 +7,20 @@ export const constantRoutes = [
     component: () => import('@/views/HomeView/index.vue')
   },
   {
-    path: '/error',
-    name: 'error',
+    path: '/404',
+    name: '404',
+    component: () => import('@/views/Error/404.vue')
+  },
+  {
+    path: '/system',
+    name: 'system',
     component: Layout,
-    redirect: '/error/404',
+    redirect: '/business',
     children: [
       {
-        path: '/error/404',
-        name: 'error404',
-        component: () => import('@/views/Error/404.vue')
+        path: '/business',
+        name: 'business',
+        component: () => import('@/views/System/index.vue')
       }
     ]
   }
