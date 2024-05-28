@@ -1,0 +1,14 @@
+{
+  // eslint
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "never",
+    "source.fixAll.eslint": "always",
+    "source.fixAll.stylelint": "explicit"
+  },
+  // 保存的时候自动格式化
+  "editor.formatOnSave": true,
+  // 默认格式化工具选择prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // 保存的时候自动格式化Style
+  "stylelint.validate": ["css", "scss", "vue", "html"]
+}
