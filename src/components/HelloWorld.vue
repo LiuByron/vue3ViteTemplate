@@ -1,29 +1,59 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-const count = ref(0)
+<script setup>
+import selectModal from './modal/selectModal.vue';
+const name = ref('我是传奇')
+const { x, y } = useMouse()
+console.log(x.value)
+console.log(y.value)
 </script>
-
 <template>
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>Edit <code>components/HelloWorld.vue</code> to test HMR</p>
-  </div>
+  <div>hello {{ name }}, this is helloworld components</div>
+  <icon-material-symbols-360 />
+  <icon-material-symbols-3g-mobiledata-badge-outline-sharp />
 
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+  <icon-user-phone class=""/>
+  <button
+    class="
+      text-sm
+      text-white
+      font-mono
+      font-light
+      py-2
+      px-4
+      rounded
+      border-2
+      border-blue-200
+      bg-blue-400
+      dark:bg-blue-500
+      hover:bg-blue-500
+      dark:hover:bg-blue-600"
+    >
+    Button
+  </button>
+  <button 
+    bg="blue-400 dark:blue-500 hover:blue-500 dark:hover:blue-600"
+    text="sm white"
+    font="mono light"
+    p="y-2 x-4"
+    border="2 rounded blue-200"
+  >
+    Button
+  </button>
+  <button class="btn-style">
+    Button
+  </button>
+  <selectModal />
 </template>
 
 <style scoped>
-.read-the-docs {
-  position: relative;
-  color: #888;
+.aa {
+  width: 28px;
+  height: 28px;
+  border: 1px solid red;
+}
+.btn-style{
+  @apply text-sm text-white font-mono font-light
+  @apply py-2 px-4 rounded border-2 border-blue-200;
+  @apply bg-blue-400 hover:bg-blue-500;
+  @apply dark:bg-blue-500 dark:hover:bg-blue-600;
 }
 </style>
