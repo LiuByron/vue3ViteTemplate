@@ -5,6 +5,7 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import App from './App.vue'
 import 'vue-global-api'
+import "video.js/dist/video-js.css";
 
 const pinia = createPinia()
 const app = createApp(App)

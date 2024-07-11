@@ -16,6 +16,16 @@ const routes = [
     name: 'about',
     component: () => import(/* webpackChunkName: "about" */ '../views/About/index.vue')
   },
+  {
+    path: '/carCurve',
+    name: 'carCurve',
+    component: () => import(/* webpackChunkName: "about" */ '../views/carCurve/index.vue')
+  },
+  {
+    path: '/m3u8',
+    name: 'm3u8',
+    component: () => import(/* webpackChunkName: "about" */ '../views/m3u8/index.vue')
+  },
 ]
 
 const router = createRouter({
