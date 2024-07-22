@@ -1,5 +1,5 @@
 <template>
-  <div :style="`height: ${calcHeight('app')};`" class="wh-full pos-relative">
+  <div :style="`height: ${calcHeight('main')};`" class="wh-full pos-relative">
     <v-chart :option="mapOption" :autoresize="true" @click="handleClick" />
     <n-button v-show="isShowBack" class="pos-absolute top-10 left-10" @click="goBack">返回</n-button>
   </div>

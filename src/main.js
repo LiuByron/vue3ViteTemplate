@@ -3,6 +3,7 @@ import router from './router'
 import { createPinia } from 'pinia'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
+import "./style/tailwind.css";
 import App from './App.vue'
 import 'vue-global-api'
 import "video.js/dist/video-js.css";
